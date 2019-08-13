@@ -1,0 +1,3325 @@
+/***********************************************/
+/*************** GENERAL STYLES ****************/
+/***********************************************/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************* START: HOME PAGE *******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+/*******************************************************/
+/*************** START: HEADER SECTION  ****************/
+/*******************************************************/
+
+/** Navigation **/
+
+.navigation {
+    width: 100%;
+    z-index: 9999;
+    background-color: transparent;
+    position: fixed;
+    top:0;
+}
+
+
+.header .navigation h1 {
+    float: left;
+    padding: 16px 0 16px 10px;
+    color: #fff;
+    font-size: 26px;
+    z-index: 999;
+}
+
+.header .navigation h1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/** Nav Menu **/
+
+.header .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.header .navigation ul li {
+    float: left;
+}
+
+.header .navigation ul li a:link,
+.header .navigation ul li a:visited {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px  10px 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header .navigation ul li a:hover,
+.header .navigation ul li a:active {
+    color: #4fa8ef;
+}
+
+/** Drop Down Menu On Hover **/
+
+.header .navigation ul li.dropDown {
+    position: relative;
+} 
+
+.header .navigation ul li .services-dropDown-content {
+   position: absolute;
+   display: none; 
+}
+
+.header .navigation ul li .services-dropDown-content li {
+   width: 225px;
+   float: none;
+}
+
+
+.header .navigation ul li .services-dropDown-content a:link, 
+.header .navigation ul li .services-dropDown-content a:visited {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px  10px;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid transparent;
+}
+
+.header .navigation ul li .services-dropDown-content a:hover, 
+.header .navigation ul li .services-dropDown-content a:active {
+    background-color: #fff;
+    color: #062F4F;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.header .navigation ul li.dropDown:hover  .services-dropDown-content {
+    display: block;
+}
+
+.header .navigation ul li.dropDown:hover  .dropDownButton {
+    color: #4fa8ef;
+}
+
+/** StickyNav with jQuery**/
+
+.is-sticky .navigation {
+    background-color:  #fff;
+    width: 100%;
+    border-bottom: 1px solid #062F4F;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    z-index: 9999;
+}
+
+.is-sticky .navigation h1 {
+    float: left;
+    padding: 16px 0 16px 10px;
+    font-size: 26px;
+    color: #062F4F;
+}
+
+.is-sticky .navigation h1 a {
+    color: #062F4F;
+}
+
+.is-sticky .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.is-sticky .navigation ul li {
+    float: left;
+}
+
+.is-sticky .navigation nav ul a:link, 
+.is-sticky .navigation  nav ul a:visited  {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px  10px 24px;
+    text-decoration: none;
+    color: #062F4F;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.is-sticky .navigation nav ul a:hover, 
+.is-sticky .navigation nav ul a:active {
+    background-color: #4fa8ef;
+    color: #fff; 
+}
+
+.is-sticky .navigation nav ul a.active {
+    background-color: #062F4F;
+    color: #fff; 
+}
+
+.is-sticky .navigation nav ul li.dropDown:hover  .dropDownButton {
+    background-color: #4fa8ef;
+    color: #fff;
+}
+
+/** Mobile Nav Menu Icon **/
+
+.mobileNavIcon {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -6px) ;
+    transform: rotate(45deg) translate(-7px, -6px) ;
+}
+
+.is-sticky .navigation .mobileNavIcon .bar1,
+.is-sticky .navigation .mobileNavIcon .bar2,
+.is-sticky .navigation .mobileNavIcon .bar3 {
+    background-color: #062F4F;
+}
+
+/** Sub - Menu Arrow Icon **/
+
+.header .navigation nav ul li.dropDown .sidebar-menu-arrow {
+    display: none;
+}
+
+/** BG Slides **/
+
+.header #home {
+    z-index: 1;
+	position: relative;
+    height: 750px;
+}
+
+.header .slides {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+.header .slides .slide1 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-renovation-1.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-renovation-1.jpg);
+    background-position: bottom center;
+}
+
+.header .slides .slide2 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-kitchen.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-kitchen.jpg);
+    background-position: bottom center;
+}
+
+.header .slides .slide3 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-bathroom.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-bathroom.jpg);
+    background-position: bottom center;
+}
+
+.header .slides .slide4 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-extension.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-extension.jpg);
+    background-position: center;
+}
+
+
+.header .slides .slide5 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-kichen-renovation.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-kichen-renovation.jpg);
+    background-position: top;
+}
+
+.header .slides .slide6 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-renovation-2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-renovation-2.jpg);
+    background-position: center;
+}
+
+.header .slides .slide7 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-renovation-3.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-renovation-3.jpg);
+    background-position: bottom center;
+}
+
+.header .slides .slide8 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-renovation-extension.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-renovation-extension.jpg);
+    background-position: center;
+}
+
+
+.header .slides .slide9 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-renovation-4.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-renovation-4.jpg);
+    background-position: bottom center;
+}
+
+.header .slides .slide10 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-kitchen-extension.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-kitchen-extension.jpg);
+    background-position: bottom center;
+}
+
+.header .slides .slide1,
+.header .slides .slide2,
+.header .slides .slide3,
+.header .slides .slide4,
+.header .slides .slide5,
+.header .slides .slide6,
+.header .slides .slide7,
+.header .slides .slide8,
+.header .slides .slide9,
+.header .slides .slide10 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+/** Header Subtitle ***/
+
+ .header .title,
+ .header .details,
+ .header .buttons {
+        text-align: center;
+ }
+    
+.header .title {
+    font-size: 51px;
+    color: #fff;
+    width: 100%;
+    padding: 200px 10px  0;
+    background-color: transparent;
+}
+
+.header .details {
+    font-size: 40px;
+    padding: 0 10px;
+    font-weight: 300;
+    color: #fff;
+}
+
+/** Button Area **/
+
+.header .buttons {
+    margin-top: 50px;
+    padding: 0 10px;
+}
+
+.header .buttons a:link,
+.header .buttons a:visited {
+    border: 2px solid #fff;
+    padding: 10px  16px;
+    font-weight: bold;
+    color: #fff;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s; 
+    cursor: pointer;
+    text-decoration: none;
+} 
+
+.header .buttons a:hover,
+.header .buttons a:active {
+	color: #062F4F;
+    background-color: white;
+}
+
+.header .buttons a.whatWeDo:hover,
+.header .buttons a.whatWeDo:active {
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    .header .slides .slide1,
+    .header .slides .slide2,
+    .header .slides .slide3,
+    .header .slides .slide4,
+    .header .slides .slide5,
+    .header .slides .slide6,
+    .header .slides .slide7,
+    .header .slides .slide8,
+    .header .slides .slide9,
+    .header .slides .slide10 {
+        height: 500px;
+    } 
+    
+    .header .title {
+        font-size: 41px;
+        width: 100%;
+        margin-top: 136px;
+        padding: 0 10px;
+    }
+
+    .header .details {
+        font-size: 30px;
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+      
+    /** Mobile Navigation **/
+
+    .mobileNavIcon {
+        display: block;    
+    }  
+
+    .navigation {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .header .navigation h1 {
+        font-size: 18px;
+        float: none;
+        color: #fff;
+    }
+    
+    .header .navigation ul {
+        float: none;
+        display: none;
+        background-color: #062F4F;
+    }
+    
+    .header .navigation ul li {
+       float: none;
+    }
+
+    .header .navigation ul li a:hover,
+    .header .navigation ul li a:active {
+        color: #4fa8ef;
+    }
+    
+    .header .navigation nav ul a.active {
+        color: #4fa8ef; 
+    }
+    
+    .is-sticky .navigation h1 {
+        color: #062F4F;
+    }
+
+    
+    .is-sticky .navigation ul {
+        background-color: #062F4F;
+    }
+    
+    .is-sticky .navigation nav ul a:link, 
+    .is-sticky .navigation  nav ul a:visited  {
+        color: #fff;
+        background-color: transparent;
+    }
+
+    .is-sticky .navigation nav ul a:hover, 
+    .is-sticky .navigation nav ul a:active {
+        color: #4fa8ef;
+        background-color: transparent;
+    }
+    
+    .is-sticky .navigation nav ul a.active {
+        color: #4fa8ef; 
+    }
+    
+    /** Drop Down Menu On Hover **/
+    
+    .header .navigation nav ul li.dropDown:hover  .dropDownButton {
+       color: #4fa8ef;
+    }
+    
+    .is-sticky .navigation nav ul li.dropDown:hover  .dropDownButton {
+       background-color: transparent;
+       color: #4fa8ef;
+    }
+
+    .header .navigation ul li.dropDown:hover  .services-dropDown-content {
+        display: none;
+    }
+    
+    .header .navigation nav ul li.dropDown .sidebar-menu-arrow {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    
+   .header .navigation ul li .services-dropDown-content {
+      position: static;
+       width: 100%;
+    }
+
+   .header .navigation ul li .services-dropDown-content li {
+       width: 100%;
+    }
+    
+    .header .navigation ul li .services-dropDown-content a:link, 
+    .header .navigation ul li .services-dropDown-content a:visited {
+        text-align: center;
+        padding: 15px  10px;
+        font-weight: normal;
+    }
+    
+    
+    /** Header: Title, Details, Buttons **/
+    .header .title {
+        font-size: 31px;
+    }
+
+    .header .details {
+        font-size: 25px;
+    }
+    
+    .header .buttons {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .header .slides .slide1 .title,
+    .header .slides .slide2 .title,
+    .header .slides .slide3 .title,
+    .header .slides .slide4 .title,
+    .header .slides .slide5 .title,
+    .header .slides .slide6 .title,
+    .header .slides .slide7 .title,
+    .header .slides .slide8 .title,
+    .header .slides .slide9 .title,
+    .header .slides .slide10 .title {
+        margin-top: 176px;
+    } 
+
+}
+
+
+@media only screen and (max-width: 360px) {
+    .header .navigation h1 {
+        font-size: 16px;
+    }
+    
+    .header .title {
+        text-align: center;
+        font-size: 25px;
+        margin-top: 116px;
+    }
+
+    .header .details {
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    .header .buttons {
+        margin-top: 30px;
+    }
+    
+    .header .buttons a {
+        padding: 10px  16px;
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        text-align: center;
+    } 
+}
+
+/****************************************************************/
+/*************** END: HEADER SECTION - HOME PAGE ****************/
+/****************************************************************/
+
+
+/**********************************************************************/
+/************** START: OUR COMPANY SECTION - HOME PAGE  ***************/
+/**********************************************************************/
+.ourCompany {
+    margin-top: 660px;
+    margin-bottom: 79px;
+}
+
+.ourCompany .container {
+    padding: 71px   10px   0;
+    text-align: center;
+}
+
+.ourCompany div {
+    float: left;
+}
+
+
+.ourCompany .ourRenovationCompany {
+   width: 50%;
+   height: auto;
+   padding: 0   10px;
+   line-height: 140%;
+}
+
+.ourCompany .ourCompanyImage {
+   padding: 0   10px;
+   width: 50%; 
+}
+
+.ourCompany .ourCompanyImage img {
+   max-width: 100%;
+}
+
+/** Our Company Title **/
+
+.ourCompany .ourRenovationCompany .title {
+   font-size: 30px;
+}
+
+.ourCompany .ourRenovationCompany .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #062F4F;
+   margin-top: 16px;
+}
+
+.ourCompany .ourRenovationCompany h2 {
+    margin-bottom: 28px; 
+}
+
+/** Our Company Description **/
+
+.ourCompany .ourRenovationCompany p {
+    font-size: 16px;
+}
+
+
+/*************** MEDIA QUERIES FOR THE OUR COMPANY SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    
+    .ourCompany {
+        margin-top: 510px;
+        margin-bottom: 79px;
+    }
+    
+    .ourCompany div {
+         float: none;
+     }
+    
+    .ourCompany .ourRenovationCompany {
+         text-align: center;
+         width: 100%;
+         margin-bottom: 20px;
+    }
+
+    .ourCompany .ourCompanyImage {
+      width: 100%; 
+    }
+    
+    .ourCompany .ourRenovationCompany .title:after {
+       margin: 0 auto;
+       margin-top: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+     .ourCompany .ourRenovationCompany .title {
+       font-size: 25px;
+     }
+
+     .ourCompany .ourRenovationCompany .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+}
+
+
+/*******************************************************************/
+/************** END: OUR COMPANY SECTION - HOME PAGE ***************/
+/*******************************************************************/
+
+
+
+/***************************************************************************/
+/************** START: LET'S JOIN FORCES SECTION - HOME PAGE ***************/
+/***************************************************************************/
+
+.letJoinForces {
+    background-color: #062F4F;
+}
+
+.letJoinForces  .container {
+    padding: 71px   10px   0;
+}
+
+/** Let's Join Forces Title **/
+
+.joinForces  .weCanJoinForces .title {
+   font-size: 30px;
+}
+
+.joinForces  .weCanJoinForces .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #fff;
+   margin-top: 16px;
+}
+
+.joinForces  .weCanJoinForces h2 {
+    margin-bottom: 28px; 
+}
+
+/** Let's Join Forces Description **/
+
+.joinForces  .weCanJoinForces {
+    color: #fff;
+    padding-bottom: 71px;
+}
+
+.joinForces  .weCanJoinForces p {
+    font-size: 22px;
+    line-height: 140%;
+}
+
+/** Get In Touch **/
+
+.joinForces .getInTouch a:link, 
+.joinForces .getInTouch a:visited {
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight:bold;
+    color: #062F4F; 
+    background-color: #fff;
+    border: 2px solid #fff;
+    padding: 20px 0;
+    display: block;
+    width: 50%;
+    margin: 43px 0 43px 50%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+}
+
+.joinForces .getInTouch a:hover, 
+.joinForces .getInTouch a:active {
+    background-color: #062F4F;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE LET'S JOIN FORCES SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    
+    .joinForces div {
+         float: none;
+     }
+    
+    .joinForces  .weCanJoinForces {
+         text-align: center;
+         width: 100%;
+         padding-bottom: 61px;
+    }
+    
+   .joinForces  .weCanJoinForces .title:after {
+       margin: 0 auto;
+       margin-top: 16px;
+    }
+    
+   .joinForces .getInTouch a:link, 
+   .joinForces .getInTouch a:visited {
+        padding: 20px 0;
+        display: block;
+        width: 32%;
+        margin: 0 34% 71px;
+    }
+    
+    .joinForces .getInTouch  {
+        width: 100%;
+    }
+    
+    .joinForces .getInTouch.col {
+		margin: 0; 
+	}
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .joinForces  .weCanJoinForces p {
+        font-size: 18px;
+    }
+    
+    .joinForces .getInTouch a:link, 
+    .joinForces .getInTouch a:visited {
+        width: 40%;
+        margin: 0 30% 71px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .joinForces  .weCanJoinForces .title {
+       font-size: 25px;
+     }
+
+     .joinForces  .weCanJoinForces .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+    
+     .joinForces .getInTouch a:link, 
+     .joinForces .getInTouch a:visited {
+        width: 60%;
+        margin: 0 20% 71px;
+     }
+}
+
+@media only screen and (max-width: 320px) {
+     .joinForces .getInTouch a:link, 
+     .joinForces .getInToucht a:visited {
+        width: 80%;
+        margin: 0 10% 71px;
+     }
+}
+
+/************************************************************************/
+/************** END: LET'S JOIN FORCES SECTION - HOME PAGE **************/
+/************************************************************************/
+
+
+/******************************************************************/
+/************ START: WHY CHOOSE US SECTION - HOME PAGE ************/
+/******************************************************************/
+
+.whyChooseUs {
+   background-color: #fff;
+   color: #000;
+}
+
+.whyChooseUs  .container {
+    padding: 71px   10px   0;
+    text-align: center; 
+
+}
+
+.whyChooseUs  #whyChooseUs {
+    padding: 0   10px;
+}
+
+
+/** Why Choose Us Introduction **/
+
+.whyChooseUs .title {
+   font-size: 30px;
+}
+
+.whyChooseUs .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #062F4F;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+
+.whyChooseUs p {
+    font-size: 16px;
+}
+
+
+
+/** why Choose Us **/
+
+.whyChooseUs h2 {
+    margin-bottom: 28px; 
+}
+
+.whyChooseUs #planning {
+    background-image: url(../images/icons/planning.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+    line-height: 140%;
+}
+
+.whyChooseUs #satisfaction {
+    background-image: url(../images/icons/satisfaction.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+    line-height: 140%;
+}
+
+.whyChooseUs #assurance {
+    background-image: url(../images/icons/assurance.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+    line-height: 140%;
+}
+
+.whyChooseUs .row h2 {
+    font-size: 20px;
+}
+
+.whyChooseUs .row p{
+    font-size: 16px;
+    margin-bottom: 58px;
+}
+
+/*************** MEDIA QUERIES FOR THE WHY CHOOSE US SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1000px) {
+    .whyChooseUs p {
+    font-size: 16px;
+    }
+   
+}
+
+@media only screen and (max-width: 800px) {
+    .whyChooseUs .row {
+      width: 100%;
+    }
+    
+    .whyChooseUs .row h2 {
+    font-size: 22px;
+    }
+    
+    .whyChooseUs p {
+    font-size: 16px;
+    } 
+    
+    .whyChooseUs .col {
+        float:none;
+        margin: 1% 0 1%;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+     .whyChooseUs .title {
+       font-size: 25px;
+     }
+
+     .whyChooseUs .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+    
+}
+
+/***********************************************************************/
+/*************** END: WHY CHOOSE US SECTION - HOME PAGE ****************/
+/***********************************************************************/
+
+
+/**********************************************************************/
+/************** START: TESTIMONIALS SECTION - HOME PAGE ***************/
+/**********************************************************************/
+
+.testimonials .container {
+    padding: 71px   10px   0;
+    text-align: center;
+   
+}
+
+.testimonials {
+    background-color: #2980b9;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/testimonials/bg-happy-customers.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/testimonials/bg-happy-customers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    height: auto;
+    color:#fff;
+}
+
+/** Testimonials Introduction **/
+
+.testimonials .title {
+   font-size: 30px;
+}
+
+.testimonials .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #fff;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.testimonials h2 {
+    margin-bottom: 28px;
+   
+}
+
+.testimonials p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+
+/** Client Testimonials **/
+
+.clientTestimonials img {
+    width: 25%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.testimonials .wrapper .client{
+    padding: 3%  30% 0;
+    text-align: center;
+}
+
+/** Client Quotes **/
+
+.testimonials .wrapper .quotes{
+    padding: 191px   10px   0;
+    padding: 5% 200px 10%;
+    text-align: center;
+}
+
+/*************** MEDIA QUERIES FOR THE TESTIMONIALS SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1000px) {
+    
+    .testimonials .container {
+    padding: 71px  10px 0 ;
+   
+    }
+   
+    .clientTestimonials img {
+       width: 35%;
+    }
+    
+     .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 5% 100px 10%;
+   
+    }
+   
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .testimonials .wrapper .client {
+        width: 100%;
+        padding: 10%  30% 0;
+   
+    }
+    
+    .clientTestimonials img {
+       width: 40%;
+    }
+    .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 5% 50px 10%;
+   
+    }
+   
+}
+
+@media only screen and (max-width: 480px) {
+    
+     .testimonials .title {
+       font-size: 25px;
+     }
+
+     .testimonials .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+    
+    .testimonials .wrapper .client {
+        width: 100%;
+        padding: 20%  30% 0;
+   
+    }
+
+    .testimonials .client img {
+       width: 60%;
+    }
+    
+    .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 10% 10px 20%;
+   
+    }
+   
+}
+
+@media only screen and (max-width: 320px) {
+    
+    .testimonials .wrapper .client {
+        width: 100%;
+        padding: 20%  20% 0;
+   
+    }
+    
+     .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 10% 10px 20%;
+   
+    }
+   
+}
+
+/********************************************************************/
+/************** END: TESTIMONIALS SECTION - HOME PAGE ***************/
+/********************************************************************/
+
+
+/******************************************************************/
+/*************** START: FOOTER SECTION - HOME PAGE ****************/
+/******************************************************************/
+
+.footer .container .copyright {
+    text-align: left;
+    padding: 56px 10px;
+}
+
+.footer .container .socialMedia {
+    text-align: left;
+    padding: 47px 0;
+}
+
+.footer .container .copyright a {
+    font-weight: bold;
+    text-decoration: none;
+    color:  #062F4F;
+}
+
+/** Social Media Icons **/
+
+.footer ul {
+    list-style-type: none;
+    float: right;
+}
+
+.footer ul li {
+    float: left;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    float: left;
+    margin: 0 10px;
+    padding: 9px 5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid  #062F4F;
+    background-color: #062F4F;
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.footer ul li a:hover {
+    background-color: #fff;
+    color: #062F4F;
+    border: 1px solid #062F4F;
+}
+
+/** Scroll To Top **/
+
+.scroll-to-top {
+     right:20px;
+     bottom:20px;
+     font-size: 25px;
+     padding: 5px 15px 10px;
+     background-color: #062F4F;
+     color: #fff;
+     border: 1px solid #fff;
+     position:fixed;
+     text-decoration: none; 
+     -webkit-transition: .3s; 
+     transition: .3s;
+     display: none;
+}
+
+.scroll-to-top:hover {  
+     background-color: #4fa8ef;
+}
+
+/*************** MEDIA QUERIES FOR THE FOOTER SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    
+    .footer .container .copyright, .footer .container .socialMedia{
+        text-align: center;
+        width: 100%;
+     }
+    
+    .footer ul {
+        float: none;
+    }
+    
+     .footer ul li {
+        text-align: center;
+        float: none;
+        display: inline-block;
+    }
+    
+    .footer .container .copyright {
+        padding: 56px 10px 10px;
+    }
+
+    .footer .container .socialMedia {
+        padding: 0  0  47px;
+    }
+    
+    .footer .col {
+        margin: 0;
+    }
+    
+   
+}
+
+
+/******************************************************************/
+/*************** END: FOOTER SECTION - HOME PAGE ******************/
+/******************************************************************/
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************** END: HOME PAGE ********************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************ START: ABOUT PAGE *******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+/**********************************************************************/
+/*************** START: HEADER SECTION - ABOUT PAGE *******************/
+/**********************************************************************/
+
+.header .bgAboutImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/about/bg-who-we-are.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/about/bg-who-we-are.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%  20%;
+    height: 500px;
+}
+
+.header #headerAbout {
+    z-index: 1;
+	position: relative;
+    height: 500px;
+}
+
+
+.header  .bgAboutImage {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+/** Header Subtitle ***/
+
+.header .aboutTitle {
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    width: 100%;
+    padding: 220px 20px  20px;
+    background-color: transparent;
+}
+
+.header .aboutDetails {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 480px) {
+    
+    .header .aboutTitle {
+    font-size: 41px;
+    width: 100%;
+    padding: 230px 10px 10px;
+    }
+
+    .header .aboutDetails {
+    font-size: 30px;
+    padding: 0 10px;
+    }
+}
+
+/*******************************************************************/
+/*************** END: HEADER SECTION - ABOUT PAGE ******************/
+/*******************************************************************/
+
+
+/**********************************************************************/
+/************** START: WHO WE ARE SECTION - ABOUT PAGE  ***************/
+/**********************************************************************/
+.aboutUs {
+    margin-top: 505px;
+    margin-bottom: 79px;
+}
+
+.aboutUs  .container {
+    padding: 71px   10px   0;
+    text-align: center;
+}
+
+.aboutUs div {
+    float: left;
+}
+
+
+.aboutUs .whoWeAre  {
+   width: 50%;
+   height: auto;
+   padding: 0   10px;
+   line-height: 140%;
+}
+
+.aboutUs .welcomeImage {
+   padding: 0   10px;
+   width: 50%; 
+}
+
+.aboutUs .welcomeImage img {
+   max-width: 100%;
+}
+
+/** Who We Are Title **/
+
+.aboutUs .whoWeAre  .title {
+   font-size: 30px;
+}
+
+.aboutUs .whoWeAre  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #062F4F;
+   margin-top: 16px;
+}
+
+.aboutUs .whoWeAre  h2 {
+    margin-bottom: 28px; 
+}
+
+/** Who We Are Description **/
+
+.aboutUs .whoWeAre  p {
+    font-size: 16px;
+}
+
+
+/*************** MEDIA QUERIES FOR THE WHO ARE SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    
+     .aboutUs  div {
+         float: none;
+     }
+    
+    .aboutUs .whoWeAre  {
+         text-align: center;
+         width: 100%;
+         margin-bottom: 20px;
+    }
+
+    .aboutUs .welcomeImage {
+      width: 100%; 
+    }
+    
+    .aboutUs .whoWeAre  .title:after {
+       margin: 0 auto;
+       margin-top: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+     .aboutUs .whoWeAre  .title {
+       font-size: 25px;
+     }
+
+     .aboutUs .whoWeAre  .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+}
+
+@media only screen and (max-width: 320px) {
+     .aboutUs {
+        margin-top: 512px;
+     }
+}
+
+/*******************************************************************/
+/************** END: WHO WE ARE SECTION - ABOUT PAGE ***************/
+/*******************************************************************/
+
+
+/***************************************************************************/
+/**************** START: WE ARE GREAT SECTION  - ABOUT PAGE ****************/
+/***************************************************************************/
+
+.weAreGreat {
+   background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/about/bg-top-quality-renovation.jpg);
+   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/about/bg-top-quality-renovation.jpg); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: left center;
+   height: 325px;
+   color: #fff;
+   margin-top: 52px;
+}
+
+
+.weAreGreat .container p {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10%   10px;
+    width: 60%;
+    margin: 0 auto;
+    line-height: 150%;
+   
+}
+
+
+/*************** MEDIA QUERIES FOR THE WE AREA GREAT SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    .weAreGreat .container p {
+     width: 90%;
+     padding: 13%  10px;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+    
+     .weAreGreat .container p {
+          width: 100%;
+          padding: 17%  10px;
+     }
+}
+
+@media only screen and (max-width: 480px) {
+ 
+   .weAreGreat .container p {
+     padding: 26%  10px;
+     font-size: 18px;
+   }
+}
+
+
+/************************************************************************/
+/**************** END:WE ARE GREAT SECTION - ABOUT PAGE *****************/
+/************************************************************************/
+
+
+/************************************************************************/
+/******************* START:TEAM SECTION - ABOUT PAGE ********************/
+/************************************************************************/
+
+.team .container {
+    padding: 71px   10px   0;
+    text-align: center; 
+}
+
+
+/** Team Introduction **/
+
+.team .title {
+   font-size: 30px;
+}
+
+.team  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #062F4F;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+ 
+.team h2  {
+    margin-bottom: 28px;
+}
+
+.team p {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+#teamSection {
+    margin-bottom: 51px;
+}
+
+/** Our Team **/
+
+.ourteam1 {
+    margin-top: 28px;
+}
+
+.team  ul .teamMember {
+    margin-bottom: 30px;
+}
+
+
+.team ul.ourteam1, 
+.team ul.ourteam2 {
+    list-style-type: none;
+}
+
+.team ul.ourteam1 img,
+.team ul.ourteam2 img {
+     width: 100%;
+     
+}
+
+/** Images Overlay **/
+
+.team .ourteam1 a, 
+.team .ourteam2 a {
+    text-decoration: none;
+}
+
+.team .ourteam1 p span, 
+.team .ourteam2 p span {
+    font-weight: bold;
+}
+
+.team .ourteam1 .caption, 
+.team .ourteam2 .caption {
+    position: relative;
+    line-height: 0;
+    margin-bottom: 10px;
+}
+
+.team .ourteam1 .photo_Overlay, 
+.team .ourteam2 .photo_Overlay {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(6, 47, 79, 0.7);
+    padding: 50%  20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 100%;
+    opacity: 0;
+}
+
+.team .ourteam1 .caption:hover .photo_Overlay, 
+.team .ourteam2 .caption:hover .photo_Overlay {
+    opacity: 1;
+}
+
+.team  .description p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+.team  .description p span {
+    color: #3189ce;
+}
+
+/*************** MEDIA QUERIES FOR THE TEAM SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 800px) {
+    .team .teamMember {
+        width: 100%;
+    } 
+    
+    .team .ourteam1 .col,  
+    .team .ourteam2 .col  {
+        margin: 0  0  30px;
+    }
+
+    .team ul.ourteam1 li, 
+    .team ul.ourteam2 li {
+         padding: 0 160px;
+    }
+    
+    
+    .team ul.ourteam1 img,
+    .team ul.ourteam2 img {
+         width: 100%; 
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .team ul.ourteam1 li, 
+    .team ul.ourteam2 li {
+         padding: 0 80px;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .team .title {
+       font-size: 25px;
+     }
+
+    .team .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    .team ul.ourteam1 li, 
+    .team ul.ourteam2 li {
+         padding: 0;
+    }
+    
+    
+    .team .description p {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+}
+
+/*************************************************************************/
+/******************* END: TEAM SECTION - ABOUT PAGE **********************/
+/*************************************************************************/
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************* END: ABOUT PAGE ********************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/********************************************** START: SERVICES PAGE ******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+/**********************************************************************/
+/*************** START: HEADER SECTION - SERVICES PAGE ****************/
+/**********************************************************************/
+
+.header .bgServicesImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/services/bg-sidonie-renovation-services.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/services/bg-sidonie-renovation-services.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height:500px;
+}
+
+.header #headerServices {
+    z-index: 1;
+	position: relative;
+    height: 500px;
+}
+
+
+.header .bgServicesImage {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+/** Header Subtitle ***/
+
+.header .servicesTitle {
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    width: 100%;
+    padding: 220px 20px  20px;
+    background-color: transparent;
+}
+
+.header .servicesDetails {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - SERVICES PAGE ****************/
+
+@media only screen and (max-width: 480px) {
+    
+    .header .servicesTitle {
+    font-size: 41px;
+    width: 100%;
+    padding: 230px 10px 10px;
+    }
+
+    .header .servicesDetails {
+    font-size: 30px;
+    padding: 0 10px;
+    }
+}
+
+
+
+/*******************************************************************/
+/*************** END: HEADER SECTION - SEVICES PAGE ****************/
+/*******************************************************************/
+
+/****************************************************************************/
+/*************** START: OUR SERVICES SECTION - SERVICES PAGE ****************/
+/****************************************************************************/
+
+#servicesSection {
+    margin-top: 426px;
+    margin-bottom: 16px;
+}
+
+.services .container {
+    padding: 71px   10px   0;
+    text-align: center;
+   
+}
+
+
+/** Services Introduction **/
+
+.services .title {
+   font-size: 30px;
+}
+
+.services  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #062F4F;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+ 
+.services h2  {
+    margin-bottom: 28px;
+}
+
+.services p {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+
+/** Our Services **/
+
+.services .ourServices {
+    margin-top: 40px;
+}
+
+.services #renovation {
+    background-image: url(../images/icons/renovation.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+    line-height: 140%;
+}
+
+.services #extension {
+    background-image: url(../images/icons/extension.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+    line-height: 140%;
+}
+
+.services #kitchen {
+    background-image: url(../images/icons/kitchen.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+    line-height: 140%;
+}
+
+.services #bathroom {
+    background-image: url(../images/icons/bathroom.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+    line-height: 140%;
+}
+
+.services .row h2 {
+    font-size: 20px;
+}
+
+.services .row p{
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/*************** MEDIA QUERIES FOR THE OUR SERVICES SECTION - SERVICES PAGE ****************/
+
+@media only screen and (max-width: 800px) {
+    
+    .services .ourServices .col {
+        margin: 1% 0 1%;
+    }
+    
+    .services .ourServices li {
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .services .title {
+       font-size: 25px;
+     }
+
+    .services .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+}
+
+/**************************************************************************/
+/*************** END: OUR SERVICES SECTION - SERVICES PAGE ****************/
+/**************************************************************************/
+
+
+/******************************************************************************/
+/**************** START: WE ARE GREAT SECTION  - SERVICES PAGE ****************/
+/******************************************************************************/
+
+.weAreGreat2 {
+   background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.7)),to(rgba(0,0,0,0.7))), url(../images/photos/services/bg-great-renovation-services.jpg);
+   background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/photos/services/bg-great-renovation-services.jpg); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: left center;
+   height: 325px;
+   color: #fff;
+}
+
+/** Our Results **/
+.weAreGreat2 .ourResults {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 78px   10px   0;
+    line-height: 150%;
+}
+
+.weAreGreat2 .ourResults span {
+    font-size: 50px;
+}
+
+.weAreGreat2 .ourResults .WeAreSuccesful {
+    padding-bottom: 25px;
+}
+
+
+
+/*************** MEDIA QUERIES FOR THE WE AREA GREAT SECTION - SERVICES PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    .weAreGreat2 .container p {
+     width: 90%;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+    .weAreGreat2 {
+       height: 650px;
+    }
+    
+    
+    .weAreGreat2 .col {
+       width: 100%;
+       margin: 0  0  50px;
+    }
+    
+    .weAreGreat2 .ourResults .WeAreSuccesful {
+       padding-bottom: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+   
+   .weAreGreat2 .container p {
+     width: 100%;
+     padding: 100px   10px;
+   }
+}
+
+@media only screen and (max-width: 320px) {
+    .weAreGreat2 .container p {
+     width: 100%;
+     padding: 100px   10px;
+     font-size: 18px;
+   }
+}
+
+/***************************************************************************/
+/**************** END:WE ARE GREAT SECTION - SERVICES PAGE *****************/
+/***************************************************************************/
+
+
+/************************************************************************************/
+/*************** START: VIEW WHAT WE OFFER SECTION - SERVICES PAGE ******************/
+/************************************************************************************/
+
+#servicesSection2 {
+    margin-bottom: 51px;
+}
+
+.view-WhatWeOffer {
+    margin-top: 28px;
+}
+
+.services ul.view-WhatWeOffer {
+    list-style-type: none;
+}
+
+/** Images Overlay **/
+
+.services ul.view-WhatWeOffer li .caption {
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.services ul.view-WhatWeOffer .caption img {
+     width: 100%;
+     -webkit-transition: all 1s;
+     transition: all 1s;
+}
+
+.services ul.view-WhatWeOffer .caption:hover img {
+     -webkit-transform: scale(1.2);
+     transform: scale(1.2);
+}
+
+.services .view-WhatWeOffer .photo_Overlay {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(6, 47, 79, 0.7);
+    padding: 30%  0;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 100%;
+    opacity: 0;
+}
+
+.services .view-WhatWeOffer .photo_Overlay:hover {
+    opacity: 1;
+}
+
+.services .view-WhatWeOffer  .description p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+.services .view-WhatWeOffer  a {
+   text-decoration: none;
+}
+
+/*************** MEDIA QUERIES FOR THE WHAT WE OFFER SECTION - SERVICES PAGE ****************/
+
+@media only screen and (max-width: 800px) {
+    
+    .services .view-WhatWeOffer .col {
+        margin: 1% 0 1%;
+    }
+    
+    .services .view-WhatWeOffer li {
+        width: 100%;
+        padding: 0 100px 20px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    .services .view-WhatWeOffer li {
+        padding: 0  0  20px;
+    }
+    
+}
+
+
+/**********************************************************************************/
+/*************** END: VIEW WHAT WE OFFER SECTION - SERVICES PAGE ******************/
+/**********************************************************************************/
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************ END: SERVICES PAGE ******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/********************************************** START: SERVICES PAGE PART 2 ***********************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+/*******************************************************************************************************/
+/****** START: HEADER SECTION - RENOVATIONS PAGE, EXTENSIONS PAGE, KITCHENS PAGE, BATHROOMS PAGE  ******/
+/*******************************************************************************************************/
+
+.header .bgRenovationsImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/services/bg-renovation-services.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/services/bg-renovation-services.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:500px;
+}
+
+.header .bgExtensionsImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/services/bg-extension-services.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/services/bg-extension-services.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:500px;
+}
+
+.header .bgKitchensImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/services/bg-kitchen-services.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/services/bg-kitchen-services.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%  80%;
+    height:500px;
+}
+
+.header .bgBathroomsImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/services/bg-bathroom-services.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/services/bg-bathroom-services.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 60%;
+    height:500px;
+}
+
+
+.header .bgRenovationsImage,
+.header .bgExtensionsImage,
+.header .bgKitchensImage,
+.header .bgBathroomsImage {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+/** Header Subtitle ***/
+
+.header .servicesWeOfferTitle {
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    width: 100%;
+    padding: 220px 20px  20px;
+    background-color: transparent;
+}
+
+.header .servicesWeOfferDetails {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - SERVICES PAGE ****************/
+
+@media only screen and (max-width: 480px) {
+    
+    .header .servicesWeOfferTitle {
+    font-size: 41px;
+    width: 100%;
+    padding: 230px 10px 10px;
+    }
+
+    .header .servicesWeOfferDetails {
+    font-size: 30px;
+    padding: 0 10px;
+    }
+}
+
+
+/*****************************************************************************************************/
+/****** END: HEADER SECTION - RENOVATIONS PAGE, EXTENSIONS PAGE, KITCHENS PAGE, BATHROOMS PAGE  ******/
+/*****************************************************************************************************/
+
+
+/****************************************************************************************************************/
+/***** START: SERVICES WE OFFER SECTION - RENOVATIONS PAGE, EXTENSIONS PAGE, KITCHENS PAGE, BATHROOMS PAGE  *****/
+/****************************************************************************************************************/
+
+.servicesWeOffer .container {
+    padding: 71px   10px   0;
+    text-align: center;
+    margin-top: 426px;
+}
+
+
+/** Services We Offer Introduction **/
+
+.servicesWeOffer .title {
+   font-size: 30px;
+}
+
+.servicesWeOffer .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #062F4F;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+ 
+.servicesWeOffer h2  {
+    margin-bottom: 28px;
+}
+
+.servicesWeOffer p {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+
+.servicesWeOffer img {
+    max-width: 80%;
+    margin-top: 50px;
+}
+
+
+.servicesWeOffer .otherServices a:link, 
+.servicesWeOffer .otherServices a:visited {
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight:bold;
+    color: #fff;
+    background-color: #062F4F;
+    border: 3px solid #062F4F;
+    padding: 20px 10px;
+    display: block;
+    max-width: 250px;
+    margin: 40px auto 71px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+}
+
+.servicesWeOffer .otherServices a:hover, 
+.servicesWeOffer .otherServices a:active {
+    color: #062F4F;
+    background-color: #fff;
+    border: 3px solid #062F4F;
+}
+
+
+/*************** MEDIA QUERIES FOR THE SERVICES WE OFFER SECTION ****************/
+
+@media only screen and (max-width: 600px) {
+    .servicesWeOffer img {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .servicesWeOffer .title {
+       font-size: 25px;
+     }
+
+    .servicesWeOffer .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+
+}
+
+
+/****************************************************************************************************************/
+/******* END: SERVICES WE OFFER SECTION - RENOVATIONS PAGE, EXTENSIONS PAGE, KITCHENS PAGE, BATHROOMS PAGE ******/
+/****************************************************************************************************************/
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/********************************************** END: SERVICES PAGE PART 2 *************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+
+
+
+
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/*********************************************** START: GALLERY PAGE ******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+/**********************************************************************/
+/*************** START: HEADER SECTION - GALLERY PAGE *****************/
+/**********************************************************************/
+
+.header .bgGalleryImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-services-renovation-gallery.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-services-renovation-gallery.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    height: 500px;
+}
+
+#headerGallery {
+    z-index: 1;
+	position: relative;
+    height: 500px;
+}
+
+
+ .header  .bgGalleryImage {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+/** Header Subtitle ***/
+
+.header .galleryTitle {
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    width: 100%;
+    padding: 220px 20px  20px;
+    background-color: transparent;
+}
+
+.header .galleryDetails {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - GALLERY PAGE ****************/
+
+
+@media only screen and (max-width: 480px) {
+    
+    .header .galleryTitle {
+    font-size: 41px;
+    width: 100%;
+    padding: 230px 10px 10px;
+    }
+
+    .header .galleryDetails {
+    font-size: 30px;
+    padding: 0 10px;
+    }
+}
+
+/*********************************************************************/
+/*************** END: HEADER SECTION - GALLERY PAGE ******************/
+/*********************************************************************/
+
+
+/***************************************************************************/
+/*************** START: OUR PROJECTS SECTION - GALLERY PAGE ****************/
+/***************************************************************************/
+
+#gallerySection {
+    margin-bottom: 71px;
+}
+
+.gallery .container {
+    padding: 71px   10px   0;
+    text-align: center;
+   
+}
+
+
+/** Gallery Introduction **/
+
+.gallery .title {
+   font-size: 30px;
+}
+
+.gallery .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #062F4F;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+ 
+.gallery h2  {
+    margin-bottom: 28px;
+}
+
+.gallery h2 {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+
+/** Our Projects - Filtering Menu **/
+
+.gallery ul.portfolio-filter {
+    list-style-type: none;
+    margin: 30px auto 28px;
+    padding: 0;
+    width: 80%;
+    display: block;
+}
+
+.gallery ul.portfolio-filter li {
+    display: inline-block;
+    margin: 0.25%;
+    font-weight: bold;
+    color: #062F4F;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #062F4F;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.gallery ul.portfolio-filter li:hover {
+    color: #fff;
+    background-color: #062F4F;
+}
+
+.gallery ul.portfolio-filter li.active {
+    color: #fff;
+    background-color: #062F4F;
+}
+
+
+
+/** Our Projects **/
+
+
+.gallery ul.ourProjects {
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+
+.gallery ul.ourProjects li {
+    width: 32.33333333333%;
+    float: left;
+    margin: 0.5%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.gallery ul.ourProjects li img {
+   width: 100%;
+   -webkit-transition: all 1s;
+   transition: all 1s;
+}
+
+.gallery ul.ourProjects li .caption:hover img {
+   -webkit-transform: scale(1.2);
+   transform: scale(1.2);
+}
+
+/** Images Overlay **/
+
+.gallery .ourProjects a {
+    text-decoration: none;
+}
+
+.gallery .ourProjects p {
+    font-weight: bold;
+    line-height: 140%;
+}
+
+.gallery .ourProjects .caption{
+    position: relative;
+}
+
+.gallery .ourProjects .photo_Overlay{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(6, 47, 79, 0.7);
+    padding: 25%  20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 100%;
+    opacity: 0;
+}
+
+.gallery .ourProjects .caption:hover .photo_Overlay {
+    opacity: 1;
+}
+
+/** Our Project Mixitup **/
+#ourProjects .mix {
+    display: none;
+}
+
+
+/*************** MEDIA QUERIES FOR THE OUR PROJECTS SECTION - GALLERY PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+
+    .gallery ul.ourProjects li {
+        width: 49%;
+        margin: 0.5%;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+
+    .gallery ul.ourProjects {
+       margin-bottom: 0;
+    } 
+    
+    .gallery ul.ourProjects li {
+        width: 100%;
+        margin: 10px  0;
+        float: none;
+    } 
+    
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .gallery .title {
+       font-size: 25px;
+     }
+
+    .gallery .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+
+}
+
+/***********************************************************************************/
+/******************* END: OUR PROJECTS SECTION - GALLERY PAGE **********************/
+/***********************************************************************************/
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************ END: GALLERY PAGE *******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+
+/***********************************************************************************************************************************/
+/***********************************************************************************************************************************/
+/***********************************************************************************************************************************/
+/*********************************************** START: GALLERY PAGE - PART 2 ******************************************************/
+/***********************************************************************************************************************************/
+/***********************************************************************************************************************************/
+/***********************************************************************************************************************************/
+
+/*******************************************************************************/
+/*************** START: HEADER SECTION - GALLERY PAGE - PART 2 *****************/
+/*******************************************************************************/
+
+.header .bgProjectOne {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-renovation-ealing.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-renovation-ealing.jpg);
+    background-position: bottom center;
+}
+
+.header .bgProjectTwo {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-extension-finsbury.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-extension-finsbury.jpg);
+    background-position: bottom center;   
+}
+
+.header .bgProjectThree {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-kitchen-edmonton.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-kitchen-edmonton.jpg);
+    background-position: center;
+}
+
+.header .bgProjectFour {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-bathroom-west-hampstead.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-bathroom-west-hampstead.jpg);
+    background-position: bottom;
+}
+
+.header .bgProjectFive {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-kitchen-renovation-kilburn.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-kitchen-renovation-kilburn.jpg);
+    background-position: center;
+}
+
+.header .bgProjectSix {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-extension-bloomsbury.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-extension-bloomsbury.jpg);
+    background-position: bottom;
+}
+
+.header .bgProjectSeven {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-bathroom-renovation-kings-cross.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-bathroom-renovation-kings-cross.jpg);
+    background-position: bottom;
+}
+
+.header .bgProjectEight {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-kitchen-renovation-wood-green.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-kitchen-renovation-wood-green.jpg);
+    background-position: top;
+}
+
+.header .bgProjectNine {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-kitchen-bathroom-walthamstow.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-kitchen-bathroom-walthamstow.jpg);
+    background-position: top;
+}
+
+.header .bgProjectTen {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-kitchen-renovation-north-finchley.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-kitchen-renovation-north-finchley.jpg);
+    background-position: bottom;
+}
+
+.header .bgProjectEleven {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-kitchen-renovation-wemblay.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-kitchen-renovation-wemblay.jpg);
+    background-position: bottom;
+}
+
+.header .bgProjectTwelve {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/gallery/bg-Kitchen-bathroom-renovation-hampstead.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/gallery/bg-Kitchen-bathroom-renovation-hampstead.jpg);
+    background-position: bottom;
+}
+
+.header .bgProjectOne,
+.header .bgProjectTwo,
+.header .bgProjectThree,
+.header .bgProjectFour,
+.header .bgProjectFive,
+.header .bgProjectSix,
+.header .bgProjectSeven,
+.header .bgProjectEight,
+.header .bgProjectNine,
+.header .bgProjectTen,
+.header .bgProjectEleven,
+.header .bgProjectTwelve {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+
+.headerProject {
+    z-index: 1;
+	position: relative;
+    height: 500px;
+}
+
+
+ .header  .bgProjectOne, 
+ .header  .bgProjectTwo, 
+ .header  .bgProjectThree, 
+ .header  .bgProjectFour, 
+ .header  .bgProjectFive, 
+ .header  .bgProjectSix, 
+ .header  .bgProjectSeven, 
+ .header  .bgProjectEight, 
+ .header  .bgProjectNine, 
+ .header  .bgProjectTen, 
+ .header  .bgProjectEleven, 
+ .header  .bgProjectTwelve  {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+/** Header Subtitle ***/
+
+.header .projectTitle {
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    width: 100%;
+    padding: 220px 20px  20px;
+    background-color: transparent;
+}
+
+.header .projectDetails {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - GALLERY PAGE PART 2 ****************/
+
+@media only screen and (max-width: 480px) {
+    
+    .header .projectTitle {
+    font-size: 41px;
+    width: 100%;
+    padding: 230px 10px 10px;
+    }
+
+    .header .projectDetails {
+    font-size: 30px;
+    padding: 0 10px;
+    }
+}
+
+/****************************************************************************/
+/*************** END: HEADER SECTION - GALLERY PAGE PART 2 ******************/
+/****************************************************************************/
+
+
+/*********************************************************************************/
+/*************** START: OUR PROJECT SECTION - GALLERY PAGE PART 2 ****************/
+/*********************************************************************************/
+
+.projectPhotos .container {
+    padding: 71px   10px   0;
+    text-align: center;
+   
+}
+
+
+/** Project - Photos Introduction **/
+
+.projectPhotos .title {
+   font-size: 30px;
+}
+
+.projectPhotos .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #062F4F;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+ 
+.projectPhotos h2  {
+    margin-bottom: 28px;
+}
+
+.projectPhotos h2 {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+
+/** Our Project **/
+
+.projectPhotos ul.ourProject {
+    list-style-type: none;
+    margin-top: 50px;
+    margin-bottom: 71px;
+}
+
+
+.projectPhotos ul.ourProject li {
+    width: 32.33333333333%;
+    float: left;
+    margin: 0.5%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.projectPhotos ul.ourProject li img {
+   width: 100%;
+   -webkit-transition: all 1s;
+   transition: all 1s;
+}
+
+.projectPhotos ul.ourProject li img:hover {
+   -webkit-transform: scale(1.2);
+   transform: scale(1.2);
+}
+
+/** Other Projects **/
+
+.projectPhotos .viewOtherProjects a:link, 
+.projectPhotos .viewOtherProjects a:visited {
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight:bold;
+    color: #fff;
+    background-color: #062F4F;
+    border: 3px solid #062F4F;
+    padding: 20px 10px;
+    display: block;
+    max-width: 250px;
+    margin: 40px auto 71px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+}
+
+.projectPhotos .viewOtherProjects a:hover, 
+.projectPhotos .viewOtherProjects a:active {
+    color: #062F4F;
+    background-color: #fff;
+    border: 3px solid #062F4F;
+}
+
+
+
+
+/*************** MEDIA QUERIES FOR THE OUR PROJECT SECTION - GALLERY PAGE PART 2 ****************/
+
+@media only screen and (max-width: 1024px) {
+
+    .projectPhotos ul.ourProject li {
+        width: 49%;
+        margin: 0.5%;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+
+    .projectPhotos ul.ourProject {
+       margin-bottom: 0;
+    } 
+    
+    .projectPhotos ul.ourProject li {
+        width: 100%;
+        margin: 10px  0;
+        float: none;
+    } 
+    
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .projectPhotos .title {
+       font-size: 25px;
+     }
+
+    .projectPhotos .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+
+}
+
+/******************************************************************************************/
+/******************* END: OUR PROJECTS SECTION - GALLERY PAGE PART 2 **********************/
+/******************************************************************************************/
+
+/*********************************************************************************************************************************/
+/*********************************************************************************************************************************/
+/*********************************************************************************************************************************/
+/************************************************ END: GALLERY PAGE PART 2 *******************************************************/
+/*********************************************************************************************************************************/
+/*********************************************************************************************************************************/
+/*********************************************************************************************************************************/
+
+
+
+
+
+
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/*********************************************** START: CONTACT PAGE ******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+.header .bgContactImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/contact/contact-sidonie-renovation.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/contact/contact-sidonie-renovation.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 500px;
+}
+
+.header #headerContact {
+    z-index: 1;
+	position: relative;
+    height: 500px;
+}
+
+
+.header .bgContactImage {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+/*************************************************************************/
+/************** START: CONTACT US SECTION - CONTACT PAGE *****************/
+/*************************************************************************/
+
+.contactUs {
+    margin-top: 426px;
+}
+
+.contactUs .container{
+    text-align: center;
+    padding: 71px 10px 0;
+}
+
+.contactUs #container2{
+    padding: 50px 10px 0;
+}
+
+/** Contact US Introduction **/
+
+.contactUs .title  {
+   font-size: 30px;
+}
+
+.contactUs  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #062F4F;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.contactUs h2  {
+    margin-bottom: 28px;
+   
+}
+
+
+.contactUs p {
+    font-size: 18px;
+}
+
+/** Contact Details **/
+
+.contactUs #contact_details {
+    padding: 0  10px;
+    text-align: left;
+}
+
+/** Contact Detail Icons **/
+.contactUs #address {
+    background-image: url(../images/icons/location.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 20px 0 40px 80px;
+}
+
+.contactUs #phoneNumber {
+    background-image: url(../images/icons/telephone.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 15px 0 40px 80px;
+}
+
+.contactUs #writeMail {
+    background-image: url(../images/icons/email.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 15px 0 40px 80px;
+}
+
+
+
+/** Contact FORM **/
+
+.contactUs #contact_form{
+    padding: 0 10px 61px;
+    text-align: left;
+}
+
+.contactUs input[type=text],
+.contactUs input[type=tel],
+.contactUs input[type=email],
+.contactUs textarea {
+    padding: 20px;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contactUs input[type=tel],
+.contactUs input[type=email],
+.contactUs textarea {
+    margin-top: 20px;
+}
+
+.contactUs textarea {
+    height: 200px;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #636363;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #636363;
+}
+
+.contactUs input[type=submit] {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #062F4F;
+    padding: 18px;
+    margin: 20px 0 71px;
+    border: 3px solid transparent;
+    width: 150px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.contactUs input[type=submit]:hover {
+   background-color: #fff;
+   color: #062F4F;
+   border: 3px solid #062F4F;
+}
+
+
+/*************** MEDIA QUERIES FOR THE CONTACT SECTION - CONTACT PAGE ****************/
+
+
+@media only screen and (max-width: 850px) {
+    
+    
+    
+    .contactUs .container{
+        text-align: center;
+    }
+    .contactUs .col {
+        margin: 0;
+    }
+    
+    .contactUs #contact_details {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    /** Contact Detail Icons **/
+    .contactUs #address {
+        background-position: top center;
+        padding: 60px 0 40px;
+    }
+
+    .contactUs #phoneNumber {
+        background-position: top center;
+        padding: 60px 0 40px;
+    }
+
+    .contactUs #writeMail {
+        background-position: top center;
+        padding: 60px 0  40px;
+    }
+    
+    
+    .contactUs #contact-form{
+        width: 100%;
+    }
+    
+    .contactUs input[type=submit] {
+        text-align: center;
+        margin: 20px auto 71px;
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+      
+      .contactUs {
+        margin-top: 436px;
+      }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    
+    .contactUs .title {
+       font-size: 25px;
+     }
+
+    .contactUs .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    .contactUs input[type=text],
+    .contactUs input[type=tel],
+    .contactUs input[type=email],
+    .contactUs textarea {
+     width: 100%;
+     margin: 1%  0;
+    }
+   
+}
+
+@media only screen and (max-width: 320px) {
+    
+    .contactUs input[type=text],
+    .contactUs input[type=tel],
+    .contactUs input[type=email],
+    .contactUs textarea {
+     padding: 20px  10px;
+    }
+    
+    .contactUs input[type=submit] {
+     width: auto;
+    }
+   
+}
+
+/*************************************************************************/
+/************** END: CONTACT US SECTION - CONTACT PAGE *******************/
+/*************************************************************************/
+
+
+/*******************************************************************/
+/*************** START: MAP SECTION - CONTACT PAGE *****************/
+/*******************************************************************/
+
+#map {
+    width: 100%;
+    height: 532px;
+    background-color: #062F4F;
+}
+
+/*********************************************************************/
+/***************** END: MAP SECTION - CONTACT PAGE *******************/
+/*********************************************************************/
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************ END: CONTACT PAGE *******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+
+
+/******************************************************************************/
+/******************* START: Customising The SLICK Plugin  *********************/
+/******************************************************************************/
+
+/******************** Background HEADER and TESTIMONIALS SECTION  **********************/
+
+/** Dots **/
+
+.slick-dots {
+    bottom: 25px;
+}
+
+.slick-dots li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.slick-dots li.slick-active {
+  background: #fff;
+  cursor: default;
+}
+
+/** Arrows **/
+
+.slick-prev {
+    left: 25px;
+    z-index: 999;
+}
+
+.slick-next {
+    right: 25px;
+
+}
+
+/******************** OTHER SERVICES SECTION  **********************/
+
+/** Dots **/
+
+.otherServices .slick-dots {
+    bottom: -40px;
+}
+
+.otherServices .slick-dots li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 2px solid #319d5e;
+  cursor: pointer;
+}
+.otherServices .slick-dots li.slick-active {
+  background: #319d5e;
+  cursor: default;
+}
+
+@media only screen and (max-width: 510px) {
+   .otherServices .slick-dots {
+      bottom: -20px;
+   }
+}
+
+@media only screen and (max-width: 320px) {
+    .otherServices .slick-dots {
+       bottom: -10px;
+    } 
+}
+
+/******************************************************************************/
+/******************** END: Customising The SLICK Plugin  **********************/
+/******************************************************************************/
+
+
+
+/*****************************************************************************************/
+/******************* START: Customising The jQuery Validation Plugin *********************/
+/*****************************************************************************************/
+
+.contactUs #contact-form  label.error {
+    color: #e74c3c;
+    text-align: left;
+    display: block;
+}
+
+.contactUs #contact-form   input.error, 
+.contactUs #contact-form   textarea.error {
+    border: 2px solid #e74c3c;
+    outline: none;
+}
+
+@media only screen and (max-width: 480px) {
+   .contactUs #contact-form  label.error {
+        margin-bottom: 10px;
+    }
+}
+
+
+/***************************************************************************************/
+/******************* END: Customising The jQuery Validation Plugin *********************/
+/***************************************************************************************/
+
+
+
+/*******************************************************************/
+/******************* Hidding Elements On Slide *********************/
+/*******************************************************************/
+
+.js-hidden  {
+    visibility: hidden;
+}
+
+/****************************************************************/
+/******************* END: Elements On Slide *********************/
+/****************************************************************/
+
+
+
